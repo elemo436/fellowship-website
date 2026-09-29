@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title> Fellowship Registration</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f7fa;
+            color: #222;
+        }
+
+        /* HEADER */
+        header {
+            background: #063970;
+            color: white;
+            padding: 15px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-box {
+            width: 45px;
+            height: 45px;
+            background: white;
+            color: #063970;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        .logo h2 {
+            font-size: 19px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 15px;
+        }
+
+        nav a:hover {
+            color: #ffd166;
+        }
+
+        /* HERO */
+        .hero {
+            background: linear-gradient(
+                rgba(6,57,112,0.9),
+                rgba(6,57,112,0.9)
+            ),
+            url("https://images.unsplash.com/photo-1523050854058-8df90110c9f1")
+            center/cover;
+
+            min-height: 480px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+            color: white;
+
+            padding: 40px 20px;
+        }
+
+        .hero-content {
+            max-width: 750px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 19px;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .apply-button {
+            display: inline-block;
+
+            background: #ffd166;
+            color: #222;
+
+            padding: 15px 30px;
+
+            border-radius: 6px;
+
+            text-decoration: none;
+
+            font-weight: bold;
+
+            font-size: 17px;
+        }
+
+        .apply-button:hover {
+            background: #ffbd32;
+        }
+
+        /* SECTIONS */
+        .container {
+            width: 86%;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        section {
+            padding: 70px 0;
+        }
+
+        .title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .title h2 {
+            color: #063970;
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .title p {
+            color: #666;
+        }
+
+        /* CARDS */
+        .cards {
+            display: grid;
+
+            grid-template-columns:
+            repeat(3, 1fr);
+
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+
+            padding: 30px;
+
+            border-radius: 10px;
+
+            box-shadow:
+            0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        .card h3 {
+            color: #063970;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* ELIGIBILITY */
+        .eligibility {
+            background: white;
+        }
+
+        .eligibility ul {
+            max-width: 700px;
+            margin: auto;
+
+            list-style: none;
+        }
+
+        .eligibility li {
+            background: #f5f7fa;
+
+            margin-bottom: 12px;
+
+            padding: 15px 20px;
+
+            border-left: 4px solid #063970;
+        }
+
+        /* APPLY AREA */
+        .apply-area {
+            background: #063970;
+            color: white;
+
+            text-align: center;
+
+            padding: 70px 20px;
+        }
+
+        .apply-area h2 {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        .apply-area p {
+            margin-bottom: 25px;
+        }
+
+        /* CONTACT */
+        .contact {
+            text-align: center;
+        }
+
+        .contact p {
+            margin: 8px;
+            color: #555;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #03294f;
+            color: white;
+
+            text-align: center;
+
+            padding: 25px;
+        }
+
+        /* MOBILE */
+        @media(max-width: 768px) {
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 8px;
+                display: inline-block;
+            }
+
+            .hero h1 {
+                font-size: 34px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+    <div class="logo">
+
+        <div class="logo-box">
+            DDU
+        </div>
+
+        <div>
+            <h2>Fellowship Program</h2>
+        </div>
+
+    </div>
+
+
+    <nav>
+
+        <a href="#home">Home</a>
+
+        <a href="#about">About</a>
+
+        <a href="#eligibility">
+            Eligibility
+        </a>
+
+        <a href="#contact">
+            Contact
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <h1>
+            Dire Dawa University Freshman Student Fellowship Registration
+        </h1>
+
+        <p>
+            Welcome to the fellowship registration portal.
+            Review the requirements and submit your form
+            online.
+        </p>
+
+
+        <!-- PUT YOUR GOOGLE FORM LINK HERE -->
+
+        <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSeVCDxKZtLik3-D4RF4wKYVDViLBnvku4C1NwsM2DBY_Ly9gQ/viewform?usp=header"
+            target="_blank"
+            class="apply-button">
+
+          Register Now
+
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- ABOUT -->
+
+<section id="about">
+
+    <div class="container">
+
+        <div class="title">
+
+            <h2>
+                About the Fellowship
+            </h2>
+
+            <p>
+                Learn about the fellowship opportunity.
+            </p>
+
+        </div>
+
+
+        <div class="cards">
+
+            <div class="card">
+
+                <h3>
+                   Spiritual Growth
+
+                </h3>
+
+                <p>
+                    Grow in faith through Bible study, prayer, worship, teaching, and spiritual guidance.
+
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>
+                    Fellowship & Community
+
+                </h3>
+
+                <p>
+           Build meaningful relationships with fellow believers, encourage one another, and grow         together as a faith community.
+
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>
+                  Service & Outreach
+
+
+                </h3>
+
+                <p>
+Use your gifts and abilities to serve others, support the community, and share the message of faith through outreach and service.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ELIGIBILITY -->
+
+<section
+    class="eligibility"
+    id="eligibility">
+
+    <div class="container">
+
+        <div class="title">
+
+            <h2>
+                Eligibility Requirements
+            </h2>
+
+            <p>
+                Applicants should meet the official
+                fellowship requirements.
+            </p>
+
+        </div>
+
+
+        <ul>
+
+          <li>
+                ✓ Provide accurate registration information.
+            </li>
+
+            <li>
+                ✓ Make sure to Submit. 
+            </li>
+
+            <li>
+                ✓ Provide a valid phone number and email.
+            </li>
+
+        </ul>
+
+    </div>
+
+</section>
+
+
+
+<!-- APPLICATION -->
+
+<section class="apply-area">
+
+    <h2>
+        Register here
+    </h2>
+
+    <p>
+        Click below to open the fellowship registration form.
+    </p>
+
+
+    <a
+        href="https://docs.google.com/forms/d/e/1FAIpQLSeVCDxKZtLik3-D4RF4wKYVDViLBnvku4C1NwsM2DBY_Ly9gQ/viewform?usp=header"
+        target="_blank"
+        class="apply-button">
+
+        Open Registration Form
+
+    </a>
+
+</section>
+
+
+
+<!-- CONTACT -->
+
+<section
+    class="contact"
+    id="contact">
+
+    <div class="container">
+
+        <div class="title">
+
+            <h2>
+                Contact
+            </h2>
+
+        </div>
+
+
+        <p>
+            Email:
+            fellowship@.edu
+        </p>
+
+        <p>
+            Phone:
+            +251
+        </p>
+
+        <p>
+            Location:
+            Dire Dawa, Ethiopia
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <p>
+        © 2026 Fellowship Registration Portal  | All Rights Reserved
+  <p>Designed & Developed by <strong>Elemo Fayera</strong></p>
+    </p>
+
+</footer>
+
+
+</body>
+</html>
